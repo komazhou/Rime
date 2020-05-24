@@ -5,8 +5,8 @@
 ---
 name: double_pinyin_flypy
 version: "2020.05.24"
-sort: origin
-use_preset_vocabulary: false
+sort: original
+use_preset_vocabulary: true
 ...
 #以下为辅助码
 说	uvye
