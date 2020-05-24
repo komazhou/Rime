@@ -1,0 +1,84 @@
+# Rime schema
+# encoding: utf-8
+patch:
+  schema:
+    schema_id: double_pinyin_flypy
+    name: 小鶴雙拼+辅助码
+    version: "0.20"
+    author:
+      - double pinyin layout by 鶴
+      - Rime schema by 佛振 <chen.sst@gmail.com>
+      - config by 周辉〈komazhou630@gmail.com>
+    description: |
+      朙月拼音＋小鶴雙拼+小鶴形码辅助方案。
+
+  switches:
+    - name: ascii_mode
+      reset: 0 #默认中文编码
+      states: [ 中文, 西文 ]
+    - name: full_shape
+      states: [ 半角, 全角 ]
+    - name: simplification
+      reset: 1 #默认简体汉字
+      states: [ 漢字, 汉字 ]
+    - name: ascii_punct
+      states: [ 。，, ．， ]
+
+  speller:
+    alphabet: zyxwvutsrqponmlkjihgfedcba
+    delimiter: " '"
+    algebra:
+      - erase/^xx$/
+      - derive/^([jqxy])u$/$1v/
+      - derive/^([aoe])([ioun])$/$1$1$2/
+      - xform/^([aoe])(ng)?$/$1$1$2/
+      - xform/iu$/Q/
+      - xform/(.)ei$/$1W/
+      - xform/uan$/R/
+      - xform/[uv]e$/T/
+      - xform/un$/Y/
+      - xform/^sh/U/
+      - xform/^ch/I/
+      - xform/^zh/V/
+      - xform/uo$/O/
+      - xform/ie$/P/
+      - xform/i?ong$/S/
+      - xform/ing$|uai$/K/
+      - xform/(.)ai$/$1D/
+      - xform/(.)en$/$1F/
+      - xform/(.)eng$/$1G/
+      - xform/[iu]ang$/L/
+      - xform/(.)ang$/$1H/
+      - xform/ian$/M/
+      - xform/(.)an$/$1J/
+      - xform/(.)ou$/$1Z/
+      - xform/[iu]a$/X/
+      - xform/iao$/N/
+      - xform/(.)ao$/$1C/
+      - xform/ui$/V/
+      - xform/in$/B/
+      - xlit/QWRTYUIOPSDFGHJKLZXCVBNM/qwrtyuiopsdfghjklzxcvbnm/
+      - fuzz/^(\w\w)\w+/$1/ #实现利用辅助码组词并增加到候选词的功能
+      #- abbrev/^(.).+$/$1/
+
+  translator:
+    dictionary: luna_pinyin.custom
+
+
+  punctuator:
+    half_shape:
+      "/" : "/"
+      "\\" : "、"
+      "[": "「"
+      "]": "」"
+      "|": "|"
+      "<": "<"
+      ">": ">"
+      "$": "￥"
+      "%": "%"
+      "*": "*"
+      "~": "~"
+      "_": "_"
+      "{": "『"
+      "}": "』"
+      "`": "`"
