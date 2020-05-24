@@ -8,6 +8,10 @@ Especially recommends `luna_pinyin.xiandaihanyuchangyongcibiao.dict.yaml`。
 
 ## Snapshot
 
+Windows Snapshot:
+
+![image-20200524235934082](C:\Users\komazhou\AppData\Roaming\Typora\typora-user-images\image-20200524235934082.png)
+
 Linux Snapshot:
 
 ![Linux Snapshot](https://raw.githubusercontent.com/alswl/Rime/master/snapshots/linux-rime.png)
@@ -40,6 +44,7 @@ Poetry Snapshot:
 ## Feature
 
 - double Pingyin input
+- 小鹤双拼模式下能借助形码辅助组词
 - official website UI
 - Apple offical input method UI
 - include Chinese Pinyin to Emoji mapping(upgrade to emoji 12.0)
