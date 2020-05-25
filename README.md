@@ -10,7 +10,7 @@ Especially recommends `luna_pinyin.xiandaihanyuchangyongcibiao.dict.yaml`。
 
 Windows Snapshot:
 
-![image-20200524235934082](C:\Users\komazhou\AppData\Roaming\Typora\typora-user-images\image-20200524235934082.png)
+![Windows Snapshot](https://raw.githubusercontent.com/komazhou/Rime/master/snapshots/Windows%20Snapshot.png)
 
 Linux Snapshot:
 
